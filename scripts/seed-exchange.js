@@ -2,7 +2,7 @@
 const Token = artifacts.require("Token")
 const Exchange = artifacts.require("Exchange")
 
-// Utils
+// Util from helpers
 const ETHER_ADDRESS = '0x0000000000000000000000000000000000000000' // Ether token deposit address
 const ether = (n) => {
   return new web3.utils.BN(
@@ -32,7 +32,7 @@ module.exports = async function(callback) {
     // Give tokens to account[1]
     const sender = accounts[0]
     const receiver = accounts[1]
-    let amount = web3.utils.toWei('10000', 'ether') // 10,000 tokens
+    let amount = web3.utils.toWei('10000', 'ether') // 10,000 tokens to wei
 
     await token.transfer(receiver, amount, { from: sender })
     console.log(`Transferred ${amount} tokens from ${sender} to ${receiver}`)

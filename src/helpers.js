@@ -11,7 +11,7 @@ export const ether = (wei) => {
   }
 }
 
-// Tokens and ether havesame decimal resolution
+// Tokens/ ether havesame decimal resolution
 export const tokens = ether
 
 
